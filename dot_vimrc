@@ -1,0 +1,12 @@
+set background=light
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set number
+set termguicolors
+set viminfofile=NONE
+
+syntax on
+
+colorscheme PaperColor
