@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+# hash: {{ toJson .languages | sha256sum }}
+
+{{ range $lang, $versions := .languages -}}
+asdf plugin-add {{ $lang }} 2>/dev/null || true
+{{ range $versions -}}
+asdf install {{ $lang }} {{ . }}
+{{ end -}}
+{{ end -}}
