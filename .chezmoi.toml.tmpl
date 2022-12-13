@@ -1,4 +1,6 @@
 {{ $email := promptStringOnce . "email" "Email address" "miquecg@users.noreply.github.com" -}}
+{{ $isPersonal := promptBoolOnce . "isPersonal" "Personal machine" true -}}
 
 [data]
   email = {{ $email | quote }}
+  isPersonal = {{ $isPersonal }}

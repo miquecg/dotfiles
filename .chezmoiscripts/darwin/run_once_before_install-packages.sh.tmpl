@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+# Brewfile hash: {{ includeTemplate "Brewfile" . | sha256sum }}
+
+brew bundle --no-lock --file=- <<EOF
+{{ template "Brewfile" . -}}
+EOF
