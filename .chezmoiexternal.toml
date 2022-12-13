@@ -4,6 +4,12 @@
   exact = true
   stripComponents = 1
   refreshPeriod = "24h"
+[".erlang_ls"]
+  type = "archive"
+  url = "https://github.com/erlang-ls/erlang_ls/archive/master.tar.gz"
+  exact = true
+  stripComponents = 1
+  refreshPeriod = "24h"
 [".vim/autoload/plug.vim"]
   type = "file"
   url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
