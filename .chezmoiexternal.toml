@@ -47,3 +47,13 @@
   type = "file"
   url = "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF Bold Italic.ttf"
   refreshPeriod = "672h"
+{{- $sublimePkgDir := "" }}
+{{- if eq .chezmoi.os "darwin" }}
+{{-   $sublimePkgDir = "Library/Application Support/Sublime Text/Installed Packages" }}
+{{- else if eq .chezmoi.os "linux" }}
+{{-   $sublimePkgDir = ".config/sublime-text-3/Installed Packages" }}
+{{- end }}
+["{{ $sublimePkgDir }}/Package Control.sublime-package"]
+  type = "file"
+  url = "https://packagecontrol.io/Package%20Control.sublime-package"
+  refreshPeriod = "168h"

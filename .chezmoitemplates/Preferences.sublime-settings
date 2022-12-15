@@ -1,0 +1,13 @@
+{
+	"ignored_packages":["Vintage"],
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "MesloLGS NF",
+	"font_size": 15,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"show_tab_close_buttons_on_left": true,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"show_navigation_bar": false,
+	"color_scheme": "Sixteen.sublime-color-scheme",
+}

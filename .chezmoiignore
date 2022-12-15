@@ -12,11 +12,13 @@
 .chezmoiscripts/darwin/**
 Library/Application Support/erlang/
 Library/Application Support/erlang_ls/
+Library/Application Support/Sublime Text/
 {{ end }}
 
 {{ if ne .chezmoi.os "linux" }}
 .config/erlang/
 .config/erlang_ls/
+.config/sublime-text-3/
 {{ end }}
 
 README.md
