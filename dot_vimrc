@@ -110,7 +110,7 @@ nnoremap <leader><Space> :nohlsearch<CR>
 call plug#begin()
 
 Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'NLKNguyen/papercolor-theme'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -133,17 +133,16 @@ endif
 
 let g:airline_symbols.colnr=' '
 
-" gruvbox
-let g:gruvbox_contrast_light='hard'
-let g:gruvbox_italic=1
-
 " https://sw.kovidgoyal.net/kitty/faq/#using-a-color-theme-with-a-background-color-does-not-work-well-in-vim
 if &term == 'xterm-kitty'
   let &t_ut=''
 endif
 
+" gruvbox8
+let g:gruvbox_filetype_hi_groups=1
+
 function! ToggleColors()
-  if &diff | colorscheme PaperColor | else | colorscheme gruvbox | endif
+  if &diff | colorscheme PaperColor | else | colorscheme gruvbox8_hard | endif
 endfunction
 
 call ToggleColors()
