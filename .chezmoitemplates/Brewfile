@@ -32,6 +32,7 @@ brew "wget"
 brew "wxwidgets"
 brew "zackelia/formulae/bclm"
 
+cask "karabiner-elements"
 cask "kitty"
 cask "slack"
 cask "sublime-text"
