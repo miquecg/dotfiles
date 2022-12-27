@@ -2,13 +2,13 @@
 
 set -efo pipefail
 
-erlang_vsn={{ index (.languages.erlang | sortAlpha | reverse) 0 }}
-tmp=$(mktemp -d)
-rebar3=$tmp/rebar3
+TMP=$(mktemp -d)
+REBAR3=$TMP/rebar3
+ERL_VSN={{ index (.languages.erlang | sortAlpha | reverse) 0 }}
 
-trap 'rm -rf -- "$tmp"' EXIT
+trap 'rm -rf -- "$TMP"' EXIT
 
-curl -fsSL https://s3.amazonaws.com/rebar3/rebar3 -o $rebar3
-chmod +x $rebar3
-source $HOME/.asdf/installs/erlang/$erlang_vsn/activate
-$rebar3 local install
+curl -fsSL https://s3.amazonaws.com/rebar3/rebar3 -o $REBAR3
+chmod +x $REBAR3
+source $HOME/.asdf/installs/erlang/$ERL_VSN/activate
+$REBAR3 local install
