@@ -2,11 +2,13 @@
 
 set -eufo pipefail
 
-# hash: {{ toJson .languages | sha256sum }}
+{{ with dig "languages" dict . -}}
+# hash: {{ toJson . | sha256sum }}
 
-{{ range $lang, $versions := .languages -}}
+{{ range $lang, $versions := . -}}
 asdf plugin-add {{ $lang }} 2>/dev/null || true
 {{ range $versions -}}
 asdf install {{ $lang }} {{ . }}
+{{ end -}}
 {{ end -}}
 {{ end -}}
