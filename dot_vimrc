@@ -115,12 +115,12 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sbdchd/neoformat'
-Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
