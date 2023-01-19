@@ -1,8 +1,8 @@
+{{- with dig "languages" "" . -}}
 #!/bin/bash
 
 set -eufo pipefail
 
-{{ with dig "languages" dict . -}}
 # hash: {{ toJson . | sha256sum }}
 
 {{ range $lang, $versions := . -}}
