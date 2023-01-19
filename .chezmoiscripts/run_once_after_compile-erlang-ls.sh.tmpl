@@ -1,0 +1,10 @@
+{{- with dig "languages" "erlang" "" . -}}
+{{- $erl_vsn := index (. | sortAlpha | reverse) 0 -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+cd $HOME/.erlang_ls
+mkdir -p release
+PREFIX=release/{{ $erl_vsn }} make install
+{{ end -}}

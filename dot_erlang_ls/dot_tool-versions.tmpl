@@ -1,0 +1,4 @@
+{{- with dig "languages" "erlang" "" . -}}
+{{- $erl_vsn := index (. | sortAlpha | reverse) 0 -}}
+erlang {{ $erl_vsn }}
+{{ end -}}
