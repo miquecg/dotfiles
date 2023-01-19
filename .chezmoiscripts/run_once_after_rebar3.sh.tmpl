@@ -11,6 +11,8 @@ trap 'rm -rf -- "$TMP"' EXIT
 
 curl -fsSL https://s3.amazonaws.com/rebar3/rebar3 -o $REBAR3
 chmod +x $REBAR3
+# Unbound _KERL_SAVED_ERL_AFLAGS on `activate` script
+# Disable `set -u`
 source $HOME/.asdf/installs/erlang/$ERL_VSN/activate
 $REBAR3 local install
 {{- else }}
