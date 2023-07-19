@@ -1,7 +1,5 @@
 # Common
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "zackelia/formulae"
 
 brew "autoconf"
